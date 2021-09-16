@@ -14,7 +14,7 @@ public class IntSort {
       realSort(arr, first, last);
     }
 
-    public static void realSort(int[] arr, int first, int last) {
+    private static void realSort(int[] arr, int first, int last) {
       if (first < last) {
         int left = first, right = last, middle = arr[(left + right) / 2];
         while (left < right) {
@@ -33,7 +33,7 @@ public class IntSort {
       }
     }
 
- /* public static void sort (List<Integer> list) {
+    public static void sort (List<Integer> list) {
     Collections.sort(list);
-  } */
+  }
 }
