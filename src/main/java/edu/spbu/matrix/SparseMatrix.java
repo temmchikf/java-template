@@ -2,10 +2,8 @@ package edu.spbu.matrix;
 
 import java.awt.*;
 import java.io.*;
-import java.nio.channels.ScatteringByteChannel;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 /**
  * Разряженная матрица
@@ -218,6 +216,7 @@ public class SparseMatrix implements Matrix
         threads.add(t);
         t.start();
       }
+
       for(Thread th:threads){
         try {
           th.join();
@@ -234,7 +233,8 @@ public class SparseMatrix implements Matrix
   }
 
   /**
-   * спавнивает с обоими вариантами
+   * сравнивает с обоими вариантами
+   *
    * @param o
    * @return
    */
@@ -294,6 +294,4 @@ public class SparseMatrix implements Matrix
 
     return false;
   }
-
-
 }
